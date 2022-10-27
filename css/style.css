@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--very-light-gray);
+}
+
+.container {
+    width: 1008px;
+    height: 536px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sedans-container {
+    background-color: var(--bright-orange);
+    border-radius: 10px 0 0 10px;
+}
+
+.suv-container {
+    background-color: var(--dark-cyan);
+}
+
+.luxury-container {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+
+.category {
+    padding: 48px 40px;
+}
+
+.title {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    margin: 32px 0;
+    font-size: 36px;
+}
+
+.description {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    color: var(--transparent-white);
+    font-size: 15px;
+    line-height: 180%;
+}
+
+.btn-learn {
+    margin: 112px 0 0;
+    min-width: 147px;
+    min-height: 44px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 40px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    transition: .2s;
+}
+
+.btn-sedan {
+    color: var(--bright-orange)
+}
+
+.btn-sedan:hover {
+    color: var(--very-light-gray);
+    background-color: var(--bright-orange);
+    border: 2px solid var(--very-light-gray);
+}
+
+.btn-suv {
+    color: var(--dark-cyan)
+}
+
+.btn-suv:hover {
+    color: var(--very-light-gray);
+    background-color: var(--dark-cyan);
+    border: 2px solid var(--very-light-gray);
+}
+
+.btn-luxury {
+    color: var(--very-dark-cyan)
+}
+
+.btn-luxury:hover {
+    color: var(--very-light-gray);
+    background-color: var(--very-dark-cyan);
+    border: 2px solid var(--very-light-gray);
+}
+
+@media screen and (max-width: 375px){
+
+    .container{
+        display: grid;
+        grid-column: auto;
+        grid-template-columns: auto;
+        max-width: 80%;
+    }
+
+    .category{
+        height: 460px;
+    }
+
+    .sedans-container{
+        border-radius: 10px 10px 0 0;
+    }
+
+    .luxury-container{
+        border-radius: 0 0 10px 10px;
+    }
+
+    .btn-learn{
+        margin: 40px 0;
+    }
+}
